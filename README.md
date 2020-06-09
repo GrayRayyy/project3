@@ -1,7 +1,7 @@
  AVC Plan
 Team Name: 29
 Team Members & contact info:
-chawangray@vuw.ac.nz
+chawanjig@gmail.com
 helenehickey.contact@gmail.com
 jackmkirkland@gmail.com
 Naputrinady@vuw.ac.nz
