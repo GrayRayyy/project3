@@ -1,0 +1,5 @@
+int CameraWidth = 150;    // 150 is the width of the Camera View
+This variable detects the CameraWidth, and that will detect the amount of pixels that are infront of the robot.
+The pixels that we are interested in are the 255 pixels.
+For this to happen, we would use "if(brightness==255{                          // Detects pixels with a brightness of 255  
+      
