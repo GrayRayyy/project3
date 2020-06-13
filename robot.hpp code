@@ -1,0 +1,34 @@
+include "robot.hpp"
+int main(){
+	if (initClientRobot() !=0){
+		std::cout<<" Error initializing robot"<<std::endl;
+	}
+    double vLeft = 40.0;
+    double vRight = 40.0;
+    takePicture();
+    SavePPMFile("i0.ppm",cameraView);
+    while(1){ double Line_position = 0;                  // While true is going in a loop analyzing the frames
+		int white = 0; 
+		int CameraWidth = 150;    
+		int Middlerow = 50;                        // 150 is the width of the Camera View
+		                                               // Stores the amount of white pixels stored
+		for (int i = 0; i < 150; i++){                           
+			int brightness = get_pixel(cameraView, 50, i, 3);       // Brightness of the pixels
+			std::cout<<brightness<<" ";
+			
+			if(brightness==255){                             // Detects pixels with a brightness of 255            
+				white++;                                            
+				Line_position += i;
+				} 
+		 } Line_position /= white;                         // Divides the Line Position by the white  
+        std::cout<<std::endl<<Line_position<<std::endl;    // Prints the average
+        
+			
+      setMotors(vLeft,vRight);   
+      std::cout<<" vLeft="<<vLeft<<"  vRight="<<vRight<<std::endl;
+       usleep(10000);
+  } //while
+  
+
+} // main
+
