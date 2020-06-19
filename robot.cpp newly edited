@@ -65,8 +65,8 @@ int main(){
         std::cout<<std::endl<<Line_position<<std::endl;    // Prints the average
         
         double dv = kp * Line_position;
-        vLeft = v_go + dv;
-        vRight = v_go - dv;
+        vLeft = v_go + dv;                              // Velocity of Left Motor
+        vRight = v_go - dv;                            // Velocity of Right Motor
 
         
 
